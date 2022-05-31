@@ -14,4 +14,4 @@ elif last_dig == 0:
 
 elif last_dig < 6:
     print("Last digit of {} is {} and is less than 6 and not 0"
-    .format(number, last_dig))
+        .format(number, last_dig))
