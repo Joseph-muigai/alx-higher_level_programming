@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """Represent a square."""
 class Square:
-    def __init__(self, size=0):
-        """
-        size - the size of the square 
+    def __init__(self, size):
+         """Initialize a new Square.
+        Args:
+            size (int): The size of the new square.
         """
         if not isinstance(size, int):
             raise TypeError ("size must be an interger")
