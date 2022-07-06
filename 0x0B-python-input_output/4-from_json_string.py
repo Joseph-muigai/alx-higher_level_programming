@@ -4,4 +4,4 @@
 def from_json_string(my_str):
     """returns an object represented in json format"""
      import json
-     json.loads(my_str)
+     return json.loads(my_str)
