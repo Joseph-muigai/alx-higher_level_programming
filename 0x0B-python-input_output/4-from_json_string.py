@@ -3,5 +3,5 @@
 
 def from_json_string(my_str):
     """returns an object represented in json format"""
-     import json
-     return json.loads(my_str)
+    import json
+    return json.loads(my_str)
