@@ -15,5 +15,5 @@ try:
 except:
     json_list = []
 for i in range(1, len(sys.argv)):
-    lst.append(sys.argv[i])
+    json_list.append(sys.argv[i])
     save_to_json(json_list, filename)
