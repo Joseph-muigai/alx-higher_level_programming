@@ -5,7 +5,7 @@ defines a script that adds all arguments to a Python list, and then save them to
 
 from sys import agrv
 
-save_to_json = __import__("5-save_to_json_file").save_to_json_file
+save_to_json = __import__("5-save_to_json_filie").save_to_json_file
 load_from_json =__import__("6-load_from_json_file").load_from_json_file
 
 filename = "add_item.json"
@@ -17,5 +17,4 @@ except:
 
 for arg in argv[1:]:
     json_list.append(arg)
-
-save_to_json(json_list, filename)
+    save_to_json(json_list, filename)
