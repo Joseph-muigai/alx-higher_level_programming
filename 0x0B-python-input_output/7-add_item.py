@@ -3,7 +3,7 @@
 defines a script that adds all arguments to a Python list, and then save them to a file
 """
 
-from sys import agrv
+import sys
 
 save_to_json = __import__("5-save_to_json_filie").save_to_json_file
 load_from_json =__import__("6-load_from_json_file").load_from_json_file
@@ -16,4 +16,4 @@ except:
     json_list = []
 for i in range(1, len(sys.argv)):
     lst.append(sys.argv[i])
-    save_to_json_file(json_list, filename)
+    save_to_json(json_list, filename)
