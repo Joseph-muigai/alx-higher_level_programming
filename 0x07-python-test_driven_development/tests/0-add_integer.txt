@@ -31,6 +31,7 @@ If the first argument is not a float or an integer a TypeError is raised.
     >>> add_integer('oyah', 6)
     Traceback (most recent call last):
     TypeError: a must be an integer
+
 If the second argument is not a float or an integer a TypeError is raised.
 
 ::
