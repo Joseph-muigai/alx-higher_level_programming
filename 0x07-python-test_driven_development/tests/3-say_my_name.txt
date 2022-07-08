@@ -1,0 +1,25 @@
+==============================
+How to Use 3-say_my_name.txt 
+==============================
+
+``say_my_name()`` a function that prints My name is <first name> <last name>
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name('Joseph', 'Muigai')
+    My name is Joseph Muigai
+
+First_name must be strings otherwise, raise a TypeError
+::
+
+    >>> say_my_name(5,'Muigai')
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+Last_name must be strings otherwise, raise a TypeError
+::
+
+    >>> say_my_name("Joseph", 5)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+

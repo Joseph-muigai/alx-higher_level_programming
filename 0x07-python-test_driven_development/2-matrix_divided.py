@@ -4,6 +4,9 @@ Defines a function that divides all elemnts of a matrix
 """
 
 def matrix_divided(matrix, div):
+    """
+    a function that divides all elemnts of a matrix
+    """
     if type(matrix) != list or any(isinstance(i, list) for i in matrix)is False:
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     for i in matrix:
