@@ -1,0 +1,46 @@
+===========================
+How to Use 0-add_integer.py
+===========================
+
+''add_integer()'' returns the sum of its arguments.
+::
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(2,3)
+    5
+
+::
+
+    >>> add_integer(2, -3)
+    -1
+
+Floating point values are first casted integers
+::
+
+    >>> add_integer(4.2,5.4)
+    9
+
+Adding Floating point values and an integers
+::
+    >>> add_integer(4, 5.4)
+    9
+
+If the first argument is not a float or an integer a TypeError is raised.
+
+::
+    >>> add_integer('oyah', 6)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+If the second argument is not a float or an integer a TypeError is raised.
+
+::
+    >>> add_integer(6, 'oyah')
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+If both both arguments are not either a float or an interger
+::
+
+    >>> add_integer('oyah', 'vipi')
+    Traceback (most recent call last):
+    TypeError: a must be an integer
