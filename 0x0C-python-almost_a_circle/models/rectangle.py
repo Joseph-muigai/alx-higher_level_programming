@@ -2,7 +2,7 @@
 """
 Define a  class Rectangle that inherits from class Base
 """
-from turtle import width
+
 from models.base import Base
 class Rectangle(Base):
     """
@@ -15,7 +15,7 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
-        
+
     @ property
     def width(self):
         """
@@ -27,6 +27,10 @@ class Rectangle(Base):
         """
         setter function for width
         """
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
         self.__width = value
     
     @ property
@@ -40,6 +44,10 @@ class Rectangle(Base):
         """
         setter function for height
         """
+        if type(value) != int:
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
         self.__height = value
     
 
@@ -54,6 +62,10 @@ class Rectangle(Base):
         """
         setter function for x
         """
+        if type(value) != int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
 
@@ -68,5 +80,9 @@ class Rectangle(Base):
         """
         setter function for y
         """
+        if type(value) != int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
     
