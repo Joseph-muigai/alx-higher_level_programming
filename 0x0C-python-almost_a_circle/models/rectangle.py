@@ -3,7 +3,7 @@
 Define a  class Rectangle that inherits from class Base
 """
 
-from base import Base
+from models.base import Base
 class Rectangle(Base):
     """
     Class Rectangle that inherits from Base
@@ -114,11 +114,24 @@ class Rectangle(Base):
         self.__width,
         self.__height
         )
-
-r1 = Rectangle(2, 3, 2, 2)
-r1.display()
-
-print("---")
-
-r2 = Rectangle(3, 2, 1, 0)
-r2.display()
+    def update(self, *args):
+        """
+        assigns an argument to each attribute
+        """
+        if args and len(args) != 0:
+            a = 0
+            for arg in args:
+                if a == 0:
+                    if arg is None:
+                        self.__init__(self.__width, self.__height, self.__x, self.__y)
+                    else:
+                        self.id = arg
+                elif a == 1:
+                    self.__width = arg
+                elif a == 2:
+                    self.__height = arg
+                elif a == 3:
+                    self.__x = arg
+                elif a == 4:
+                    self.__y = arg
+                a += 1
