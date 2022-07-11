@@ -72,3 +72,26 @@ class Square(Rectangle):
                     self.x = v
                 elif k == "y":
                     self.y = v
+    def to_dictionary(self):
+        """
+        Returns s dictionary representation of a square
+        """
+        return{
+
+            "id":self.id,
+            "size":self.width,
+            "x":self.x,
+            "y":self.y
+        }
+
+s1 = Square(10, 2, 1)
+print(s1)
+s1_dictionary = s1.to_dictionary()
+print(s1_dictionary)
+print(type(s1_dictionary))
+
+s2 = Square(1, 1)
+print(s2)
+s2.update(**s1_dictionary)
+print(s2)
+print(s1 == s2)
