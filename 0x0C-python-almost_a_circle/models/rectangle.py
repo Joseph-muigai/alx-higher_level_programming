@@ -3,7 +3,7 @@
 Define a  class Rectangle that inherits from class Base
 """
 
-from models.base import Base
+from base import Base
 class Rectangle(Base):
     """
     Class Rectangle that inherits from Base
@@ -96,12 +96,16 @@ class Rectangle(Base):
         """
         prints in stdout the Rectangle instance with the character #
         """
+        for y in range(self.__y):
+            print("")
         for h in range(self.__height):
+            for x in range(self.x):
+                print(" ",end="")
             print ("#" * self.__width)
     
     def __str__(self):
         """
-        returns an objects representation as a class
+        returns an objects representation as a string
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
         self.id, 
@@ -110,3 +114,11 @@ class Rectangle(Base):
         self.__width,
         self.__height
         )
+
+r1 = Rectangle(2, 3, 2, 2)
+r1.display()
+
+print("---")
+
+r2 = Rectangle(3, 2, 1, 0)
+r2.display()
