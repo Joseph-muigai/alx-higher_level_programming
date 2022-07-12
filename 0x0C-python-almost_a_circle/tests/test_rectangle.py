@@ -10,6 +10,7 @@ import unittest
 from models.rectangle import Rectangle
 from models.base import Base
 
+
 class Test_Rectangle_instantiation(unittest.TestCase):
     """Unnittests for testing instantiation of class REctangle"""
 
@@ -86,3 +87,19 @@ class Test_Rectangle_instantiation(unittest.TestCase):
         r = Rectangle(5, 7, 7, 5, 1)
         r.y = 10
         self.assertEqual(10, r.y)
+
+class Test_Rectangle_width(unittest.TestCase):
+    """
+    unittests to test the intantiation of width
+    """
+    def test_no_args(self):
+        with self.assertRaisesRegex(TypeError,"width must be an interger"):
+            Rectangle(None, 2)
+    
+    def test_width_isint(self):
+        r1 = Rectangle(4,5)
+        if self.assertEqual(isinstance(r1.width, int),True):
+            return True
+        else:
+            return "width must be an interger"
+
