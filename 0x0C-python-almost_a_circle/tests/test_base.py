@@ -28,4 +28,15 @@ class Test_Base(unittest.TestCase):
         b1 = Base()
         self.assertEqual(type(b1), Base)
         self.assertTrue(isinstance(b1, Base))
-    
+    def test_to_json_string(self):
+        """Test for method to_json_string"""
+        d = {'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8}
+        json_d = Base.to_json_string([d])
+        self.assertTrue(isinstance(d, dict))
+        self.assertTrue(isinstance(json_d, str))
+        self.assertCountEqual(
+            json_d, '[{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]')
+        json_d_1 = Base.to_json_string([])
+        self.assertEqual(json_d_1, "[]")
+        json_d_2 = Base.to_json_string(None)
+        self.assertEqual(json_d_2, "[]")
