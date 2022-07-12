@@ -133,6 +133,12 @@ class Test_Rectangle_methods(unittest.TestCase):
         with contextlib.redirect_stdout(f):
             r2.display()
             self.assertEqual(f.getvalue(), res)
+    
+    def test_str(self):
+        """Test __str__ method"""
+        r1 = Rectangle(10,3)
+        self.assertEqual(r1.__str__(), "[Rectangle] (1) 0/0 - 10/3")
+
 
 
 
