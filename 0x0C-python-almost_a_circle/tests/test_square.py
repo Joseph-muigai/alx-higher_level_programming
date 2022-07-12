@@ -25,3 +25,13 @@ class Test_Square(unittest.TestCase):
     
     def test_is_Rectangle_instance(self):
         """Check if Square is an instance of Rectangle"""
+        self.assertEqual(isinstance(self.s1, Rectangle),True)
+    
+    def test_access_to_private_attributes(self):
+        """Trying to access privte attributes"""
+        with self.assertRaises(AttributeError):
+            self.s1.__height
+            self.s1.__width
+            self.s1.__x
+            self.s1.__y
+    
