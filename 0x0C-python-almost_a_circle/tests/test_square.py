@@ -38,5 +38,17 @@ class Test_Square(unittest.TestCase):
     def test_str(self):
         """Test the __str__method"""
         s1 = Square( 10,11,12,13)
-        self.assertEqual(str(s1), "[Square] (13) 11/12 - 10")
+        self.assertEqual(s1.__str__(), "[Square] (13) 11/12 - 10")
 
+
+    def test_update(self):
+        
+        """Test update method on Square.
+                """
+
+        s1 = Square(8)
+        s1.update(30)
+        self.assertEqual(s1.id, 30)
+
+if __name__ == "__main__":
+    unittest.main()
