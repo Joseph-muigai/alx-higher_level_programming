@@ -6,7 +6,10 @@ Defines unnittestsfor models/rectangles.py
 
 """
 
+import contextlib
+from io import StringIO
 import unittest
+from unittest.mock import patch
 from models.rectangle import Rectangle
 from models.base import Base
 
@@ -90,7 +93,7 @@ class Test_Rectangle_instantiation(unittest.TestCase):
 
 class Test_Rectangle_width(unittest.TestCase):
     """
-    unittests to test the intantiation of width
+    unittests to test the initialization of width
     """
     def test_no_args(self):
         with self.assertRaisesRegex(TypeError,"width must be an interger"):
@@ -103,3 +106,35 @@ class Test_Rectangle_width(unittest.TestCase):
         else:
             return "width must be an interger"
 
+class Test_Rectangle_methods(unittest.TestCase):
+    """
+    unit tests for method in the class rectangle
+    """
+    def test_area(self):
+        """
+        Testing for area
+        """
+        r1 = Rectangle(10,3)
+        self.assertEqual(r1.area(), 30)
+    
+    def test_display(self):
+        """
+        Test for display
+        """
+        r1 = Rectangle(3,2)
+        output = "###\r\n###\r\n"
+        with patch("sys.stdout", new = StringIO()) as str_out:
+            r1.display()
+            self.assertEqual(str_out.getvalue(), output)
+
+        r2 = Rectangle(2, 5, 2, 4)
+        res = '\n\n\n\n  ##\r\n  ##\r\n  ##\r\n  ##\r\n  ##\r\n'
+        f = StringIO()
+        with contextlib.redirect_stdout(f):
+            r2.display()
+            self.assertEqual(f.getvalue(), res)
+
+
+
+if __name__ == '__main__':
+    unittest.main()
