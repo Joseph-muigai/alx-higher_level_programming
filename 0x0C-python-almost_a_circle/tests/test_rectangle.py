@@ -150,6 +150,14 @@ class Test_Rectangle_methods(unittest.TestCase):
         self.assertEqual(r1.y, 5)
         self.assertEqual(r1.__str__(),"[Rectangle] (1) 5/5 - 5/5" )
 
+    def test_to_disctionary(self):
+        """Tests for to_dictionary method"""
+        r1 = Rectangle(10, 2, 1, 9)
+        r_dict = {'id': 1, 'width': 10, 'height': 2, 'x': 1, 'y': 9}
+        r1_dict = r1.to_dictionary()
+        self.assertEqual(len(r1_dict),len(r_dict))
+        self.assertEqual(type(r1_dict), dict)
+    
 
 
 

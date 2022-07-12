@@ -96,6 +96,7 @@ class Rectangle(Base):
         """
         prints in stdout the Rectangle instance with the character #
         """
+        
         for y in range(self.__y):
             print("")
         for h in range(self.__height):
