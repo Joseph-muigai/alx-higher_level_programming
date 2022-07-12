@@ -139,6 +139,18 @@ class Test_Rectangle_methods(unittest.TestCase):
         r1 = Rectangle(10,3)
         self.assertEqual(r1.__str__(), "[Rectangle] (1) 0/0 - 10/3")
 
+    def test_update(self):
+        """Tests method update"""
+        r1 = Rectangle(1,5,5,5,5)
+        r1.update()
+        self.assertEqual(r1.id, 1)
+        self.assertEqual(r1.width, 5)
+        self.assertEqual(r1.height, 5)
+        self.assertEqual(r1.x, 5)
+        self.assertEqual(r1.y, 5)
+        self.assertEqual(r1.__str__(),"[Rectangle] (1) 5/5 - 5/5" )
+
+
 
 
 
