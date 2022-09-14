@@ -20,9 +20,6 @@
         for (let index = 0; index < this.height; index++) {
             console.log('X'.repeat(this.width));            
         }
-        console.log(
-
-        );
     }
 }
 module.exports = Rectangle
