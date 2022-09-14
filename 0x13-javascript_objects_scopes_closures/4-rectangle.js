@@ -26,8 +26,7 @@
         }
     }
     rotate(){
-        this.width = this.height;
-        this.height = this.width;
+        this.width = [this.height, this.height = this.width][0];
     }
     double(){
         this.width = this.width*2;
