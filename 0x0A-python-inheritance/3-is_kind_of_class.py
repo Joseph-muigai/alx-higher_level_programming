@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/python3
 # 3-is_kind_of_class.py
 # Gedeon Obae Gekonge <gideonobae@gmail.com>
@@ -17,3 +18,23 @@ def is_kind_of_class(obj, a_class):
     if isinstance(obj, a_class):
         return True
     return False
+=======
+#!/usr/bin/python3
+"""
+Defines a function that returns True 
+if the object is an instance of, or 
+if the object is an instance of a class that inherited from,
+the specified class ; otherwise False.
+"""
+def is_kind_of_class(obj, a_class):
+    """
+    a function that returns True 
+    if the object is an instance of, or 
+    if the object is an instance of a class that inherited from,
+    the specified class ; otherwise False.
+    """
+    if isinstance(obj, a_class):
+        return True
+    else:
+        return False
+>>>>>>> 62368ea1ba978dc845934bd6fe50f77ef9c79c6e

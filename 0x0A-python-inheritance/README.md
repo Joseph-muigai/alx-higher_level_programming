@@ -1,3 +1,4 @@
+<<<<<<< HEAD:0x0A-python-inheritance/Readme.md
 # Python - Inheritance
 
 In this project, I learned about Python class inheritance. I learned about the
@@ -105,3 +106,7 @@ Prototypes for functions written in this project:
     * If an attribute cannot be added, a `TypeError` exception is raised with the
     message `can't add new attribute`.
 
+=======
+
+#0x0A. Python - Inheritance
+>>>>>>> 62368ea1ba978dc845934bd6fe50f77ef9c79c6e:0x0A-python-inheritance/README.md
